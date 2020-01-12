@@ -35,6 +35,7 @@ Inherits Application
 	#tag Method, Flags = &h0
 		Sub addTables()
 		  sunajanusDB.SQLExecute("CREATE TABLE Settings (id Integer, Setting VarChar NOT NULL, value VarChar, PRIMARY KEY(id));")
+		  sunajanusDB.SQLExecute("CREATE TABLE Tasks (id Integer, Task VarChar NOT NULL, details VarChar, PRIMARY KEY(id));")
 		  
 		  sunajanusDB.Commit()
 		  
