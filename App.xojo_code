@@ -15,7 +15,7 @@ Inherits Application
 		  Dim tables As RecordSet
 		  
 		  sunajanusDB = new SQLiteDatabase
-		  sunajanusDB.DatabaseFile = SpecialFolder.UserLibrary.Child("Mobile Documents").child("com~apple~CloudDocs").Child("hazhapard").Child("sunajanus.sqlite")
+		  sunajanusDB.DatabaseFile = SpecialFolder.Documents.Child("sunajanus.sqlite")
 		  if sunajanusDB.CreateDatabaseFile then
 		    tables = sunajanusDB.TableSchema
 		    If tables <> Nil Then
