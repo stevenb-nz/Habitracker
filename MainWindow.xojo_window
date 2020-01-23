@@ -23,7 +23,7 @@ Begin Window MainWindow
    MinWidth        =   64
    Placement       =   0
    Resizeable      =   True
-   Title           =   "Sunajanus"
+   Title           =   "Habitracker"
    Visible         =   True
    Width           =   600
 End
