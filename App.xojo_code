@@ -15,7 +15,7 @@ Inherits Application
 		  Dim tables As RecordSet
 		  
 		  habitrackerDB = new SQLiteDatabase
-		  habitrackerDB.DatabaseFile = SpecialFolder.Documents.Child("Habitracker.sqlite")
+		  habitrackerDB.DatabaseFile = SpecialFolder.Documents.child("myDBs").Child("Habitracker.sqlite")
 		  if habitrackerDB.CreateDatabaseFile then
 		    tables = habitrackerDB.TableSchema
 		    If tables <> Nil Then
