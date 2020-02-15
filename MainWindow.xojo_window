@@ -26,12 +26,396 @@ Begin Window MainWindow
    Title           =   "Habitracker"
    Visible         =   True
    Width           =   600
+   Begin GroupBox PostDateGroupBox
+      AutoDeactivate  =   True
+      Bold            =   False
+      Caption         =   ""
+      Enabled         =   True
+      Height          =   63
+      HelpTag         =   ""
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   155
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      Scope           =   0
+      TabIndex        =   0
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextFont        =   "System"
+      TextSize        =   0.0
+      TextUnit        =   0
+      Top             =   20
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   290
+      Begin Label YearLabel
+         AutoDeactivate  =   True
+         Bold            =   False
+         DataField       =   ""
+         DataSource      =   ""
+         Enabled         =   True
+         Height          =   20
+         HelpTag         =   ""
+         Index           =   -2147483648
+         InitialParent   =   "PostDateGroupBox"
+         Italic          =   False
+         Left            =   375
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   0
+         TabPanelIndex   =   0
+         TabStop         =   True
+         Text            =   "Year"
+         TextAlign       =   0
+         TextColor       =   &c00000000
+         TextFont        =   "System"
+         TextSize        =   0.0
+         TextUnit        =   0
+         Top             =   40
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   50
+      End
+      Begin Label MonthLabel
+         AutoDeactivate  =   True
+         Bold            =   False
+         DataField       =   ""
+         DataSource      =   ""
+         Enabled         =   True
+         Height          =   20
+         HelpTag         =   ""
+         Index           =   -2147483648
+         InitialParent   =   "PostDateGroupBox"
+         Italic          =   False
+         Left            =   290
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   1
+         TabPanelIndex   =   0
+         TabStop         =   True
+         Text            =   "Month"
+         TextAlign       =   0
+         TextColor       =   &c00000000
+         TextFont        =   "System"
+         TextSize        =   0.0
+         TextUnit        =   0
+         Top             =   40
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   50
+      End
+      Begin Label DayLabel
+         AutoDeactivate  =   True
+         Bold            =   False
+         DataField       =   ""
+         DataSource      =   ""
+         Enabled         =   True
+         Height          =   20
+         HelpTag         =   ""
+         Index           =   -2147483648
+         InitialParent   =   "PostDateGroupBox"
+         Italic          =   False
+         Left            =   200
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   2
+         TabPanelIndex   =   0
+         TabStop         =   True
+         Text            =   "Day"
+         TextAlign       =   0
+         TextColor       =   &c00000000
+         TextFont        =   "System"
+         TextSize        =   0.0
+         TextUnit        =   0
+         Top             =   40
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   50
+      End
+      Begin UpDownArrows TDayChange
+         AcceptFocus     =   False
+         AutoDeactivate  =   True
+         Enabled         =   True
+         Height          =   23
+         HelpTag         =   ""
+         Index           =   -2147483648
+         InitialParent   =   "PostDateGroupBox"
+         Left            =   175
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         Scope           =   0
+         TabIndex        =   3
+         TabPanelIndex   =   0
+         TabStop         =   True
+         Top             =   40
+         Transparent     =   False
+         Visible         =   True
+         Width           =   13
+      End
+      Begin UpDownArrows TMonthChange
+         AcceptFocus     =   False
+         AutoDeactivate  =   True
+         Enabled         =   True
+         Height          =   23
+         HelpTag         =   ""
+         Index           =   -2147483648
+         InitialParent   =   "PostDateGroupBox"
+         Left            =   265
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         Scope           =   0
+         TabIndex        =   4
+         TabPanelIndex   =   0
+         TabStop         =   True
+         Top             =   40
+         Transparent     =   False
+         Visible         =   True
+         Width           =   13
+      End
+      Begin UpDownArrows TYearChange
+         AcceptFocus     =   False
+         AutoDeactivate  =   True
+         Enabled         =   True
+         Height          =   23
+         HelpTag         =   ""
+         Index           =   -2147483648
+         InitialParent   =   "PostDateGroupBox"
+         Left            =   350
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         Scope           =   0
+         TabIndex        =   5
+         TabPanelIndex   =   0
+         TabStop         =   True
+         Top             =   40
+         Transparent     =   False
+         Visible         =   True
+         Width           =   13
+      End
+   End
 End
 #tag EndWindow
 
 #tag WindowCode
+	#tag Event
+		Sub Open()
+		  dim d as new date
+		  TYear = str(d.year)
+		  TMonth = str(d.month)
+		  TDay = str(d.day)
+		  set_tdayofweek(d.DayOfWeek)
+		  self.Title = d.LongDate
+		  
+		  
+		End Sub
+	#tag EndEvent
+
+
+	#tag Method, Flags = &h0
+		Sub set_tdayofweek(day_number as integer)
+		  select case day_number
+		  case 1
+		    TWeekDay = "Sun,"
+		  case 2
+		    TWeekDay = "Mon,"
+		  case 3
+		    TWeekDay = "Tue,"
+		  case 4
+		    TWeekDay = "Wed,"
+		  case 5
+		    TWeekDay = "Thu,"
+		  case 6
+		    TWeekDay = "Fri,"
+		  case 7
+		    TWeekDay = "Sat,"
+		  end
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub valid_date()
+		  dim d as new date
+		  
+		  d.year = val(TYear)
+		  d.month = val(TMonth)
+		  d.day = val(TDay)
+		  while d.day <> val(TDay)
+		    TDay = str(val(TDay)-1)
+		    d.year = val(TYear)
+		    d.month = val(TMonth)
+		    d.day = val(TDay)
+		  wend
+		  TYear = str(d.year)
+		  TMonth = str(d.month)
+		  TDay = str(d.day)
+		  set_tdayofweek(d.DayOfWeek)
+		  self.Title = d.LongDate
+		  
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub valid_date_day_up()
+		  dim d as new date
+		  
+		  d.year = val(TYear)
+		  d.month = val(TMonth)
+		  d.day = val(TDay)
+		  while d.day <> val(TDay)
+		    TDay = str(1)
+		    d.year = val(TYear)
+		    d.month = val(TMonth)
+		    d.day = val(TDay)
+		  wend
+		  TYear = str(d.year)
+		  TMonth = str(d.month)
+		  TDay = str(d.day)
+		  set_tdayofweek(d.DayOfWeek)
+		  self.Title = d.LongDate
+		  
+		  
+		End Sub
+	#tag EndMethod
+
+
+	#tag Property, Flags = &h0
+		TDay As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		TMonth As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		TWeekDay As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		TYear As String
+	#tag EndProperty
+
+
 #tag EndWindowCode
 
+#tag Events TDayChange
+	#tag Event
+		Sub Up()
+		  dim v as integer
+		  
+		  v = val(TDay)
+		  if v < 31 then
+		    TDay = str(v+1)
+		  else
+		    TDay = str(1)
+		  end if
+		  valid_date_day_up
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Down()
+		  dim v as integer
+		  
+		  v = val(TDay)
+		  if v > 1 then
+		    TDay = str(v-1)
+		  else
+		    TDay = str(31)
+		  end if
+		  valid_date
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events TMonthChange
+	#tag Event
+		Sub Up()
+		  dim v as integer
+		  
+		  v = val(TMonth)
+		  if v < 12 then
+		    TMonth = str(v+1)
+		  else
+		    TMonth = str(1)
+		  end if
+		  valid_date
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Down()
+		  dim v as integer
+		  
+		  v = val(TMonth)
+		  if v > 1 then
+		    TMonth = str(v-1)
+		  else
+		    TMonth = str(12)
+		  end if
+		  valid_date
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events TYearChange
+	#tag Event
+		Sub Down()
+		  dim v as integer
+		  
+		  v = val(TYear)
+		  TYear = str(v-1)
+		  valid_date
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Up()
+		  dim v as integer
+		  
+		  v = val(TYear)
+		  TYear = str(v+1)
+		  valid_date
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="Name"
