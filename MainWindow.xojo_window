@@ -299,6 +299,18 @@ End
 #tag WindowCode
 	#tag Event
 		Sub Open()
+		  myDateChangeTimer = new DateChangeTimer
+		  myDateChangeTimer.Period = 50
+		  myDateChangeTimer.Mode = Timer.ModeMultiple
+		  
+		  init_day
+		  
+		End Sub
+	#tag EndEvent
+
+
+	#tag Method, Flags = &h0
+		Sub init_day()
 		  dim d as new date
 		  TYear = str(d.year)
 		  TMonth = str(d.month)
@@ -306,13 +318,10 @@ End
 		  set_tdayofweek(d.DayOfWeek)
 		  self.Title = d.LongDate
 		  
-		  myDateChangeTimer = new DateChangeTimer
-		  myDateChangeTimer.Period = 50
-		  myDateChangeTimer.Mode = Timer.ModeMultiple
+		  'find most recent day with tasks, if any - create for new, and intervening, days.
 		  
 		End Sub
-	#tag EndEvent
-
+	#tag EndMethod
 
 	#tag Method, Flags = &h0
 		Sub set_tdayofweek(day_number as integer)

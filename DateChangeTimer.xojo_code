@@ -6,12 +6,9 @@ Inherits Timer
 		  dim d as new date
 		  
 		  if MainWindow.Title <> d.LongDate then
-		    MainWindow.TYear = str(d.year)
-		    MainWindow.TMonth = str(d.month)
-		    MainWindow.TDay = str(d.day)
-		    MainWindow.set_tdayofweek(d.DayOfWeek)
-		    MainWindow.Title = d.LongDate
+		    MainWindow.init_day
 		  end
+		  
 		End Sub
 	#tag EndEvent
 
