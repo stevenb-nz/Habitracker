@@ -234,7 +234,7 @@ Begin Window MainWindow
       Bold            =   False
       ButtonStyle     =   "0"
       Cancel          =   False
-      Caption         =   "+"
+      Caption         =   "+  ✓"
       Default         =   False
       Enabled         =   True
       Height          =   20
@@ -266,7 +266,7 @@ Begin Window MainWindow
       Bold            =   False
       ButtonStyle     =   "0"
       Cancel          =   False
-      Caption         =   "-"
+      Caption         =   "-  ✓"
       Default         =   False
       Enabled         =   True
       Height          =   20
