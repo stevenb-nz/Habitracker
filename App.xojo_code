@@ -28,6 +28,7 @@ Inherits Application
 		    MsgBox "Something went wrong creating a new database file."
 		  end if
 		  
+		  
 		End Sub
 	#tag EndEvent
 

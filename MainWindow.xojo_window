@@ -306,6 +306,9 @@ End
 		  set_tdayofweek(d.DayOfWeek)
 		  self.Title = d.LongDate
 		  
+		  myDateChangeTimer = new DateChangeTimer
+		  myDateChangeTimer.Period = 50
+		  myDateChangeTimer.Mode = Timer.ModeMultiple
 		  
 		End Sub
 	#tag EndEvent
@@ -379,6 +382,10 @@ End
 		End Sub
 	#tag EndMethod
 
+
+	#tag Property, Flags = &h0
+		myDateChangeTimer As DateChangeTimer
+	#tag EndProperty
 
 	#tag Property, Flags = &h0
 		TDay As String
@@ -709,20 +716,24 @@ End
 		Name="TDay"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="TMonth"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="TWeekDay"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="TYear"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 #tag EndViewBehavior
