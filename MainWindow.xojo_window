@@ -9,23 +9,23 @@ Begin Window MainWindow
    FullScreen      =   False
    FullScreenButton=   False
    HasBackColor    =   False
-   Height          =   400
+   Height          =   800
    ImplicitInstance=   True
    LiveResize      =   True
    MacProcID       =   0
-   MaxHeight       =   32000
+   MaxHeight       =   800
    MaximizeButton  =   True
-   MaxWidth        =   32000
+   MaxWidth        =   400
    MenuBar         =   2013716479
    MenuBarVisible  =   True
-   MinHeight       =   64
+   MinHeight       =   800
    MinimizeButton  =   True
-   MinWidth        =   64
+   MinWidth        =   400
    Placement       =   0
    Resizeable      =   True
    Title           =   "Habitracker"
    Visible         =   True
-   Width           =   600
+   Width           =   400
    Begin GroupBox PostDateGroupBox
       AutoDeactivate  =   True
       Bold            =   False
@@ -36,10 +36,10 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   155
-      LockBottom      =   True
+      Left            =   20
+      LockBottom      =   False
       LockedInPosition=   False
-      LockLeft        =   True
+      LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
       Scope           =   0
@@ -65,10 +65,10 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "PostDateGroupBox"
          Italic          =   False
-         Left            =   375
-         LockBottom      =   True
+         Left            =   240
+         LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   True
+         LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Multiline       =   False
@@ -100,10 +100,10 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "PostDateGroupBox"
          Italic          =   False
-         Left            =   290
-         LockBottom      =   True
+         Left            =   155
+         LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   True
+         LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Multiline       =   False
@@ -135,10 +135,10 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "PostDateGroupBox"
          Italic          =   False
-         Left            =   200
-         LockBottom      =   True
+         Left            =   65
+         LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   True
+         LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Multiline       =   False
@@ -167,10 +167,10 @@ Begin Window MainWindow
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "PostDateGroupBox"
-         Left            =   175
-         LockBottom      =   True
+         Left            =   40
+         LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   True
+         LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Scope           =   0
@@ -190,10 +190,10 @@ Begin Window MainWindow
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "PostDateGroupBox"
-         Left            =   265
-         LockBottom      =   True
+         Left            =   130
+         LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   True
+         LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Scope           =   0
@@ -213,10 +213,10 @@ Begin Window MainWindow
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "PostDateGroupBox"
-         Left            =   350
-         LockBottom      =   True
+         Left            =   215
+         LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   True
+         LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Scope           =   0
@@ -228,6 +228,70 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   13
       End
+   End
+   Begin PushButton PlusButton
+      AutoDeactivate  =   True
+      Bold            =   False
+      ButtonStyle     =   "0"
+      Cancel          =   False
+      Caption         =   "+"
+      Default         =   False
+      Enabled         =   True
+      Height          =   20
+      HelpTag         =   ""
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   322
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      TabIndex        =   1
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextFont        =   "System"
+      TextSize        =   0.0
+      TextUnit        =   0
+      Top             =   26
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   58
+   End
+   Begin PushButton MinusButton
+      AutoDeactivate  =   True
+      Bold            =   False
+      ButtonStyle     =   "0"
+      Cancel          =   False
+      Caption         =   "-"
+      Default         =   False
+      Enabled         =   True
+      Height          =   20
+      HelpTag         =   ""
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   322
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      TabIndex        =   2
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextFont        =   "System"
+      TextSize        =   0.0
+      TextUnit        =   0
+      Top             =   57
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   58
    End
 End
 #tag EndWindow
@@ -640,5 +704,25 @@ End
 		InitialValue="True"
 		Type="Boolean"
 		EditorType="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="TDay"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="TMonth"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="TWeekDay"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="TYear"
+		Group="Behavior"
+		Type="String"
 	#tag EndViewProperty
 #tag EndViewBehavior
