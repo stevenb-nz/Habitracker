@@ -35,9 +35,7 @@ Inherits Application
 
 	#tag Method, Flags = &h0
 		Sub addTables()
-		  habitrackerDB.SQLExecute("CREATE TABLE Settings (id Integer, Setting VarChar NOT NULL, value VarChar, PRIMARY KEY(id));")
-		  habitrackerDB.SQLExecute("CREATE TABLE Tasks (id Integer, Task VarChar NOT NULL, type VarChar, PRIMARY KEY(id));")
-		  habitrackerDB.SQLExecute("CREATE TABLE Entries (id Integer, title VarChar NOT NULL, body VarChar, PRIMARY KEY(id));")
+		  habitrackerDB.SQLExecute("CREATE TABLE Item (id Integer, prompt VarChar, item_type VarChar, date VarChar, value VarChar, PRIMARY KEY(id));")
 		  
 		  habitrackerDB.Commit()
 		  
