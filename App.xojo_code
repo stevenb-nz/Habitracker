@@ -35,9 +35,36 @@ Inherits Application
 
 	#tag Method, Flags = &h0
 		Sub addTables()
+		  dim row as DatabaseRecord
+		  
 		  habitrackerDB.SQLExecute("CREATE TABLE Type (id Integer, item_type VarChar, PRIMARY KEY(id));")
 		  habitrackerDB.SQLExecute("CREATE TABLE Prompt (id Integer, prompt_text VarChar, type_id Integer, PRIMARY KEY(id));")
 		  habitrackerDB.SQLExecute("CREATE TABLE Item (id Integer, prompt_id Integer, date VarChar, value VarChar, PRIMARY KEY(id));")
+		  
+		  row = new DatabaseRecord
+		  row.Column("item_type") = "Boolean"
+		  habitrackerDB.InsertRecord("Type", row)
+		  if habitrackerDB.Error then
+		    MsgBox("DB Error: " + habitrackerDB.ErrorMessage)
+		  else
+		    habitrackerDB.commit()
+		  end if
+		  row = new DatabaseRecord
+		  row.Column("item_type") = "Numeric"
+		  habitrackerDB.InsertRecord("Type", row)
+		  if habitrackerDB.Error then
+		    MsgBox("DB Error: " + habitrackerDB.ErrorMessage)
+		  else
+		    habitrackerDB.commit()
+		  end if
+		  row = new DatabaseRecord
+		  row.Column("item_type") = "String"
+		  habitrackerDB.InsertRecord("Type", row)
+		  if habitrackerDB.Error then
+		    MsgBox("DB Error: " + habitrackerDB.ErrorMessage)
+		  else
+		    habitrackerDB.commit()
+		  end if
 		  
 		  habitrackerDB.Commit()
 		  
