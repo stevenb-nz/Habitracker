@@ -9,16 +9,16 @@ Begin Window MainWindow
    FullScreen      =   False
    FullScreenButton=   False
    HasBackColor    =   False
-   Height          =   800
+   Height          =   817
    ImplicitInstance=   True
    LiveResize      =   True
    MacProcID       =   0
-   MaxHeight       =   800
+   MaxHeight       =   817
    MaximizeButton  =   True
    MaxWidth        =   400
    MenuBar         =   2013716479
    MenuBarVisible  =   True
-   MinHeight       =   800
+   MinHeight       =   103
    MinimizeButton  =   True
    MinWidth        =   400
    Placement       =   0
@@ -318,7 +318,12 @@ End
 		  set_tdayofweek(d.DayOfWeek)
 		  self.Title = d.LongDate
 		  
-		  'find most recent day with tasks, if any - create for new, and intervening, days.
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub load_day()
 		  
 		End Sub
 	#tag EndMethod
@@ -364,6 +369,7 @@ End
 		  set_tdayofweek(d.DayOfWeek)
 		  self.Title = d.LongDate
 		  
+		  load_day
 		  
 		End Sub
 	#tag EndMethod
@@ -387,6 +393,7 @@ End
 		  set_tdayofweek(d.DayOfWeek)
 		  self.Title = d.LongDate
 		  
+		  load_day
 		  
 		End Sub
 	#tag EndMethod
